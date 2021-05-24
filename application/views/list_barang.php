@@ -25,39 +25,20 @@ tr:nth-child(even) {
 
 <table>
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
+    <th>No</th>
+    <th>Nama Barang</th>
+    <th>Stok Barang</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
+  <?php $i = 1;
+		foreach ($data as $barang) { ?>
+			<tr>
+				<td><?php echo $i++ ?></td>
+				<td><?php echo $barang->nama ?></td>
+				<td><?php echo $barang->stok_barang ?></td>
+			</tr>
+<?php } ?>
+    
   </tr>
 </table>
 

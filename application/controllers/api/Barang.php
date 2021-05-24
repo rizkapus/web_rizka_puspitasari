@@ -12,7 +12,7 @@ class Barang extends REST_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Barang_model', 'barang');        
+        $this->load->model('Barang_model', 'barang');     
     }
 
     public function index_get() {
