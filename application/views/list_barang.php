@@ -21,7 +21,8 @@ tr:nth-child(even) {
 </head>
 <body>
 
-<h2>HTML Table</h2>
+<h2>Laporan Harian</h2>
+<h3>Tanggal 24 Mei 2021</h3>
 
 <table>
   <tr>
@@ -31,11 +32,11 @@ tr:nth-child(even) {
   </tr>
   <tr>
   <?php $i = 1;
-		foreach ($data as $barang) { ?>
+		foreach ($barang as $barangs) { ?>
 			<tr>
 				<td><?php echo $i++ ?></td>
-				<td><?php echo $barang->nama ?></td>
-				<td><?php echo $barang->stok_barang ?></td>
+				<td><?php echo $barangs->nama ?></td>
+				<td><?php echo $barangs->jumlah ?></td>
 			</tr>
 <?php } ?>
     
