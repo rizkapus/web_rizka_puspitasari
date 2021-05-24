@@ -1,0 +1,68 @@
+untuk REST API, bisa dicoba di PostMan.
+
+authentifikasi login untuk mendapatkan token dengan method POST, akan didapat seperti JSON dibawah ini:
+http://localhost/rizka_puspitasari/api/users/login?username=rizkapus&password=123456
+
+didapat response seperti:
+{
+    "status": true,
+    "data": {
+        "user_id": "1",
+        "nama": "Rizka Puspitasari",
+        "email": "rizkapspitas@gmail.com",
+        "created_at": "2021-05-24 00:00:00",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJuYW1hIjoiUml6a2EgUHVzcGl0YXNhcmkiLCJ1c2VybmFtZSI6InJpemthcHVzIiwiZW1haWwiOiJyaXprYXBzcGl0YXNAZ21haWwuY29tIiwiY3JlYXRlZF9hdCI6IjIwMjEtMDUtMjQgMDA6MDA6MDAiLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNS0yNCAwMDowMDowMCIsInRpbWUiOjE2MjE4MjcwODh9.aFMGP64-Pdqbpb0x2lRDjGBGg798YPOinAuuhhuSEoQ"
+    },
+}
+
+
+copy token tersebut dan jalankan tab "Headers" di PostMan dengan memasukkan:
+key                value
+x-token            eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJuYW1hIjoiUml6a2EgUHVzcGl0YXNhcmkiLCJ1c2VybmFtZSI6InJpemthcHVzIiwiZW1haWwiOiJyaXprYXBzcGl0YXNAZ21haWwuY29tIiwiY3JlYXRlZF9hdCI6IjIwMjEtMDUtMjQgMDA6MDA6MDAiLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNS0yNCAwMDowMDowMCIsInRpbWUiOjE2MjE4MjcwODh9.aFMGP64-Pdqbpb0x2lRDjGBGg798YPOinAuuhhuSEoQ
+x-api-key          rizkapus
+
+kemudian lakukan lagi auth login dan akan muncul message bahwa user berhasil login:
+{
+    "status": true,
+    "data": {
+        "user_id": "1",
+        "nama": "Rizka Puspitasari",
+        "email": "rizkapspitas@gmail.com",
+        "created_at": "2021-05-24 00:00:00",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJuYW1hIjoiUml6a2EgUHVzcGl0YXNhcmkiLCJ1c2VybmFtZSI6InJpemthcHVzIiwiZW1haWwiOiJyaXprYXBzcGl0YXNAZ21haWwuY29tIiwiY3JlYXRlZF9hdCI6IjIwMjEtMDUtMjQgMDA6MDA6MDAiLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNS0yNCAwMDowMDowMCIsInRpbWUiOjE2MjE4MjcwODh9.aFMGP64-Pdqbpb0x2lRDjGBGg798YPOinAuuhhuSEoQ"
+    },
+    "message": "User login successful"
+}
+
+
+-untuk "GET" barang di REST API bisa dicoba di postman dengan menggunakan method GET dengan memasukkan key dan token yang sudah ditentukan diatas.
+ jika sudah sesuai, akan muncul rest api GET barang seperti dibwah ini:
+ {
+    "status": "true",
+    "data": [
+        {
+            "nama": "Mediatech Konektor Audio Splitter U Shape Male to Dual Female Jack 3.5mm (669059)",
+            "jumlah": "11"
+        },
+        {
+            "nama": "Mediatech Headphone Gaming Zeus MSH 016 + Microphone Pakai Kabel (56019) - Headphone Gaming",
+            "jumlah": "7"
+        },
+        {
+            "nama": "Logitech H151 Stereo Headset Single Jack 3.5\" For Mobile",
+            "jumlah": "5"
+        },
+        {
+            "nama": "Logitech B175 Wireless Mouse",
+            "jumlah": "20"
+        }
+    ]
+}
+
+
+-untuk "POST" barang di REST API bisa dicoba di postman dengan menggunakan method POST dengan memasukkan key dan token yang sudah ditentukan diatas.
+ jika sudah sesuai, akan muncul rest api POST barang seperti dibawah ini dan barang akan terupdate di tabel barang.
+{
+    "status": "true",
+    "message": "data berhasil ditambahkan"
+}
