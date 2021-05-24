@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2021 at 05:32 AM
+-- Generation Time: May 24, 2021 at 06:36 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -44,7 +44,8 @@ INSERT INTO `barang` (`id`, `nama`, `created_at`, `updated_at`) VALUES
 (3, 'Mediatech Headphone Gaming Zeus MSH 016 + Microphone Pakai Kabel (56019) - Headphone Gaming', '2021-05-23 19:36:01', '2021-05-23 19:36:01'),
 (4, 'Mediatech Konektor Audio Splitter U Shape Male to Dual Female Jack 3.5mm (669059)', '2021-05-23 19:36:01', '2021-05-23 19:36:01'),
 (5, 'barang tes tes', '2021-05-24 03:18:06', '2021-05-24 03:18:06'),
-(6, 'barang tes', '2021-05-24 03:18:12', '2021-05-24 03:18:12');
+(6, 'barang tes', '2021-05-24 03:18:12', '2021-05-24 03:18:12'),
+(7, 'barang coba', '2021-05-24 04:34:35', '2021-05-24 04:34:35');
 
 -- --------------------------------------------------------
 
@@ -157,7 +158,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `keys`
