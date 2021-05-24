@@ -1,4 +1,12 @@
-untuk REST API, bisa dicoba di PostMan.
+-welcome page yang ditampilkan web ini bisa diakses di URL:
+http://localhost/rizka_puspitasari/login
+
+login dengan memasukkan:
+username: rizkapus
+password: 123456
+
+
+-untuk REST API, bisa dicoba di PostMan.
 
 authentifikasi login untuk mendapatkan token dengan method POST, akan didapat seperti JSON dibawah ini:
 http://localhost/rizka_puspitasari/api/users/login?username=rizkapus&password=123456
